@@ -1,0 +1,30 @@
+﻿.header {
+    position: absolute;
+    width: 96vw;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    background-color: #0094ff;
+}
+
+.leftPanel, .rightPanel, .centerPanel {
+    position: absolute;
+    top: 70px;
+}
+
+.leftPanel {
+    left: 10px;
+    width: 160px;
+    background-color: #5e5e6c;
+}
+
+.rightPanel {
+    right: 10px;
+    width: 160px;
+    background-color: #5e5e6c;
+}
+
+.centerPanel {
+    margin-left: 175px;
+    margin-right: 180px;
+}
