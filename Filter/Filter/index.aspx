@@ -22,7 +22,8 @@
             <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IDNumber,JournalDate" DataSourceID="SqlDataSource1" Height="196px" Width="404px">
+            <br />
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IDNumber,JournalDate" DataSourceID="SqlDataSource1">
                 <Columns>
                     <asp:BoundField DataField="IDNumber" HeaderText="IDNumber" ReadOnly="True" SortExpression="IDNumber" />
                     <asp:BoundField DataField="JournalDate" HeaderText="JournalDate" ReadOnly="True" SortExpression="JournalDate" />
@@ -31,10 +32,11 @@
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [ArtistJournal] WHERE (([IDNumber] = ?) AND ([JournalDate] &gt;= ?))">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="RadioButtonList1" Name="IDNumber" PropertyName="SelectedValue" Type="Int16" />
+                    <asp:ControlParameter ControlID="RadioButtonList1" DefaultValue="0" Name="IDNumber" PropertyName="SelectedValue" Type="Int16" />
                     <asp:ControlParameter ControlID="txtDate" Name="JournalDate" PropertyName="Text" Type="DateTime" />
                 </SelectParameters>
             </asp:SqlDataSource>
+            <br />
             <br />
             <br />
         </div>
